@@ -18,6 +18,10 @@ header {
   border-bottom: 1px solid #666;
   box-shadow:0 1px #181818;
 }
+.homeH1 {
+  color: white;
+  text-decoration: none;
+}
 
 .homeSection {
   position: relative;
@@ -69,6 +73,51 @@ header {
 h2 {
   text-align: center;
 }
-h3 {
+p {
   text-align: center;
+  margin-bottom: 20px;
+}
+.score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.playerScores {
+  font-size: xxx-large;
+  width: fit-content;
+}
+#div-rules {
+  height: 600px;
+  width: 500px;
+  background-color: #666;
+  border: 1px solid #b9b9b9;
+  border-radius: 5%;
+  
+}
+#rules-placement {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh
+}
+#RPS {
+  margin-left: 28%;
+  margin-top: 3vh;
+}
+.hands {
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+.hands:hover {
+  opacity: 75%;
+}
+.hands:active {
+  opacity: 50%;
+}
+#icons {
+  height: 40vh;
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
 }
