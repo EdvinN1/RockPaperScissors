@@ -1,3 +1,4 @@
+
 const rock = 0
 const paper = 1
 const scissors = 2
@@ -11,8 +12,18 @@ let computerPoints = 0
 let htmlPlayerPoints = document.getElementById("p1Score");
 let htmlComputerPoints = document.getElementById("p2Score");
 let winnerText = document.getElementById("winnerText");
+let winnerLoser = document.getElementById("winnerLoser");
+let gamePage = document.getElementById("gamePage");
 
-
+function generateRandomNumber() {
+    return Math.floor(Math.random() * 3);
+}
+function resetStats() {
+    htmlPlayerPoints.innerText = 0;
+    htmlComputerPoints.innerText = 0;
+    playerPoints = 0
+    computerPoints = 0
+}
 
 const choiceRock = document.getElementById("sten")
 choiceRock.addEventListener("click", function handleClick() {
@@ -44,6 +55,7 @@ function checkWinner(computer, player) {
         playerPoints++
         htmlPlayerPoints.innerText = playerPoints;
         winnerText.innerText = "You got a point"
+
     } else if ((player + 1) % 3 == computer) {
         computerPoints++
         htmlComputerPoints.innerText = computerPoints;
@@ -51,30 +63,21 @@ function checkWinner(computer, player) {
     } else {
         winnerText.innerText = "Draw"
     }
-    if (playerPoints === 3) {
-        //  winnerText.innerText = "You won!"
-        window.location.href = "winnerPage.html";
-          winnerPageText.innerHtml = "You won!"
-          winnerPageText2.innerHtml = "You won!"
-          resetStats()
 
-  
-      } else if (computerPoints === 3) {
-         // winnerText.innerText = "You lost!"
-          window.location.href = "winnerPage.html";
-          winnerPageText.innerHtml = "You lost!"
-          winnerPageText2.innerHtml = "You lost!"
-          resetStats()
-          
-      }
-}
-//setTimeout(function () { resetStats() }, 3000);
-function generateRandomNumber() {
-    return Math.floor(Math.random() * 3);
-}
-function resetStats() {
-    htmlPlayerPoints.innerText = 0;
-    htmlComputerPoints.innerText = 0;
-    playerPoints = 0
-    computerPoints = 0
+    if (playerPoints === 3) {
+        winnerPageText.innerText = "You won!"
+        winnerPageText2.innerText = "You won!"
+        gamePage.style.display = "none"
+        winnerLoser.style.display = ""
+
+        resetStats()
+
+    } else if (computerPoints === 3) {
+        winnerPageText.innerText = "You lost!"
+        winnerPageText2.innerText = "You lost!"
+        gamePage.style.display = "none"
+        winnerLoser.style.display = ""
+        resetStats()
+
+    }
 }

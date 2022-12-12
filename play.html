@@ -10,12 +10,14 @@
 </head>
 
 <body>
-    <header>
-        <a class="homeH1" href="index.html">
-            <h1 id="mainhead">rock<span style="color:#e06c75;">Paper</span><span style="color:#61afef;">Scissors</span></h1>
-        </a>
-    </header>
-    <div id="winnerText"></div>
+    <div id="gamePage">
+        <header>
+            <a class="homeH1" href="index.html">
+                <h1 id="mainhead">rock<span style="color:#e06c75;">Paper</span><span
+                        style="color:#61afef;">Scissors</span></h1>
+            </a>
+        </header>
+        <div id="winnerText"></div>
         <div class="score">
             <h1 class="playerScores">You</h1>
             <h1 class="playerScores">PC</h1>
@@ -30,6 +32,27 @@
             <img class="hands" id="sax" src="sax.png" alt="bild på sax">
             <img class="hands" id="pase" src="pase.png" alt="bild på pase">
         </div>
+    </div>
+
+    <div id="winnerLoser" style="display: none;">
+        <div id="consoleLogAnimation">
+            <h1>Console<span style="color:white;">.</span><span style="color:#e06c75;">log</span><span
+                    style="color:#61afef">("</span></h1>
+            <div class="string">
+                <h1 class="greeting" id="resultOne">YOU WIN</h1>
+                <h1 class="greeting" id="playAgain1">PLAY AGAIN?</h1>
+                <h1 class="greeting" id="resultTwo">YOU WIN</h1>
+                <h1 class="greeting" id="playAgain2">PLAY AGAIN</h1>
+            </div>
+            <h1 class="closure" style="color:#61afef">");</h1>
+        </div>
+        <div id="lastPageButton" class="homeSection">
+            <a href="play.html">
+                <button class="button">PLAY <br> AGAIN</button>
+            </a>
+        </div>
+    </div>
 </body>
 <script src="main.js"></script>
+
 </html>
