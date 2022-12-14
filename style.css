@@ -15,7 +15,6 @@ body {
 
 }
 
-/*border-bottom: 1px double #e06c75;*/
 header {
   display: flex;
   justify-content: center;
@@ -30,6 +29,7 @@ header {
 }
 
 .firstPageDiv {
+  display: flex;
   position: relative;
   min-height: 87vh;
   min-width: 90vw;
@@ -40,7 +40,7 @@ header {
 }
 
 .button {
-  padding: 10px 25px;
+  padding: 2vw;
   font-family: JetBrains Mono, monospace;
   font-size: 6vw;
   cursor: pointer;
@@ -100,7 +100,7 @@ p {
 }
 
 ul {
-  padding-left: 1vw;
+  padding-left: 1.5vw;
 }
 
 #rules-placement {
@@ -110,10 +110,13 @@ ul {
 }
 
 #RPS {
-  margin-left: 28%;
-  margin-top: 3vh;
+  display: block;
+  margin: 0 auto;
 }
-
+.playerScores {
+  margin-top: 1.5vh;
+  margin-bottom: 1.4vh;
+}
 .hands {
   height: 200px;
   width: 200px;
@@ -129,14 +132,14 @@ ul {
 }
 
 #icons {
-  height: 40vh;
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: row;
 }
 
 #winnerText {
-  height: 60px;
+  height: fit-content;
   font-size: 50px;
   text-align: center;
   color: #61afef;
@@ -228,5 +231,103 @@ ul {
 
   75% {
     transform: translatey(-17.6vmin);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #mainhead {
+    font-size: 7vw;
+  }
+
+  .button {
+    font-size: 14vw;
+
+  }
+
+  #icons {
+    flex-flow: wrap;
+  }
+
+  .firstPageDiv {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  ul {
+    padding-left: 6vw;
+  }
+
+  #consoleLogAnimation {
+    font-size: 2vw;
+  }
+
+  @keyframes move {
+    25% {
+      transform: translatey(-5.6vmin);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translatey(-11.1vmin);
+    }
+
+    75% {
+      transform: translatey(-16.2vmin);
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  @keyframes move {
+    25% {
+      transform: translatey(-5.2vmin);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translatey(-10.4vmin);
+    }
+
+    75% {
+      transform: translatey(-16vmin);
+    }
+  }
+
+  .button {
+    font-size: 19vw;
+  }
+
+  #RPS {
+    margin-top: 4vh;
+    width: 70vw;
+  }
+
+  #div-rules {
+    font-size: 4vw;
+  }
+
+  #winnerText {
+    font-size: 30px;
+  }
+
+  .hands {
+    height: 170px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  @keyframes move {
+    25% {
+      transform: translatey(-5.1vmin);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translatey(-11.3vmin);
+    }
+
+    75% {
+      transform: translatey(-17.5vmin);
+    }
   }
 }

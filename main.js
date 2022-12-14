@@ -65,16 +65,16 @@ function checkWinner(computer, player) {
     }
 
     if (playerPoints === 3) {
-        winnerPageText.innerText = "You won!"
-        winnerPageText2.innerText = "You won!"
+        winnerPageText.innerText = "YOU WON!"
+        winnerPageText2.innerText = "YOU WON!"
         gamePage.style.display = "none"
         winnerLoser.style.display = ""
 
         resetStats()
 
     } else if (computerPoints === 3) {
-        winnerPageText.innerText = "You lost!"
-        winnerPageText2.innerText = "You lost!"
+        winnerPageText.innerText = "YOU LOSE!"
+        winnerPageText2.innerText = "YOU LOSE!"
         gamePage.style.display = "none"
         winnerLoser.style.display = ""
         resetStats()
